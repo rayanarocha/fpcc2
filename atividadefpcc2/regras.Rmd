@@ -1,0 +1,166 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r warning=FALSE, message=FALSE}
+library(arules)
+library(dplyr)
+library(readr)
+library(tidyverse)
+library(here)
+theme_set(theme_bw())
+```
+
+```{r}
+
+##LENDO DATAFRAMES
+
+df_2012 = read_csv(
+    here("dados_nt/dados2012.csv"),
+    col_types = cols(
+        .default = col_double(),
+        tipo_morte = col_character(),
+        hora = col_character(),
+        bairro_ocorrencia = col_character(),
+        logradouro = col_character(),
+        genero = col_character(),
+        etnia = col_character(),
+        idade = col_character(),
+        profissao = col_character(),
+        escolaridade = col_character(),
+        instrumento_utilizado = col_character(),
+        faixa = col_character(),
+        turno = col_character()
+    )
+)
+
+df12 = df_2012 %>% 
+    filter(ano == 2012)
+
+#df12 %>% 
+ #   slice(1:8)
+
+df_2013 = read_csv(
+    here("dados_nt/dados2013.csv"),
+    col_types = cols(
+        .default = col_double(),
+        tipo_morte = col_character(),
+        hora = col_character(),
+        bairro_ocorrencia = col_character(),
+        logradouro = col_character(),
+        genero = col_character(),
+        etnia = col_character(),
+        idade = col_character(),
+        profissao = col_character(),
+        escolaridade = col_character(),
+        instrumento_utilizado = col_character(),
+        faixa = col_character(),
+        turno = col_character()
+    )
+)
+
+df13 = df_2013 %>% 
+    filter(ano == 2013)
+
+df_2014 = read_csv(
+    here("dados_nt/dados2014.csv"),
+    col_types = cols(
+        .default = col_double(),
+        tipo_morte = col_character(),
+        hora = col_character(),
+        bairro_ocorrencia = col_character(),
+        logradouro = col_character(),
+        genero = col_character(),
+        etnia = col_character(),
+        idade = col_character(),
+        profissao = col_character(),
+        escolaridade = col_character(),
+        instrumento_utilizado = col_character(),
+        faixa = col_character(),
+        turno = col_character()
+    )
+)
+
+df14 = df_2014 %>% 
+    filter(ano == 2014)
+
+df_2015 = read_csv(
+    here("dados_nt/dados2015.csv"),
+    col_types = cols(
+        .default = col_double(),
+        tipo_morte = col_character(),
+        hora = col_character(),
+        bairro_ocorrencia = col_character(),
+        logradouro = col_character(),
+        genero = col_character(),
+        etnia = col_character(),
+        idade = col_character(),
+        profissao = col_character(),
+        escolaridade = col_character(),
+        instrumento_utilizado = col_character(),
+        faixa = col_character(),
+        turno = col_character()
+    )
+)
+
+df15 = df_2015 %>% 
+    filter(ano == 2015)
+
+df_2016 = read_csv(
+    here("dados_nt/dados2016.csv"),
+    col_types = cols(
+        .default = col_double(),
+        tipo_morte = col_character(),
+        hora = col_character(),
+        bairro_ocorrencia = col_character(),
+        logradouro = col_character(),
+        genero = col_character(),
+        etnia = col_character(),
+        idade = col_character(),
+        profissao = col_character(),
+        escolaridade = col_character(),
+        instrumento_utilizado = col_character(),
+        faixa = col_character(),
+        turno = col_character()
+    )
+)
+
+df16 = df_2016 %>% 
+    filter(ano == 2016)
+
+df_2017 = read_csv(
+    here("dados_nt/dados2017.csv"),
+    col_types = cols(
+        .default = col_double(),
+        tipo_morte = col_character(),
+        hora = col_character(),
+        bairro_ocorrencia = col_character(),
+        logradouro = col_character(),
+        genero = col_character(),
+        etnia = col_character(),
+        idade = col_character(),
+        profissao = col_character(),
+        escolaridade = col_character(),
+        instrumento_utilizado = col_character(),
+        faixa = col_character(),
+        turno = col_character()
+    )
+)
+
+df17 = df_2017 %>% 
+    filter(ano == 2017)
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
